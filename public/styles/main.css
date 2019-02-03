@@ -22,7 +22,7 @@ main:before {
 }
 /* Paper */
 .paper {
-    background: #fefefe;
+    background: #fafafa;
     box-shadow: 1px 1px 1px 1px #ccc;
     display: grid;
     grid-template-columns: 2fr 2fr 1fr 1fr;
