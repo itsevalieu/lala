@@ -115,6 +115,9 @@ main:before {
     left: 50;
     transform: rotate(7deg);
 }
+audio {
+    height: 45px;
+}
 .message1:hover, .message2:hover, .message3:hover {
     transform: rotate(3deg);
 }
