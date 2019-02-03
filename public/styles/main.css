@@ -115,6 +115,9 @@ main:before {
     left: 50;
     transform: rotate(7deg);
 }
+.message1:hover, .message2:hover, .message3:hover {
+    transform: rotate(3deg);
+}
 @media (min-width: 768px) and (max-width: 1024px) {
     main {
         margin: 0 0;
