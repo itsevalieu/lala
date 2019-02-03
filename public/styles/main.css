@@ -1,0 +1,53 @@
+main {
+    background: #f5f5dc;
+    border: 1px solid rgb(243, 245, 225);
+    box-shadow: 1px 1px 1px 1px #ccc;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr auto;
+    grid-template-areas: 
+        "slider summary summary summary"
+        "work work personal personal";
+    margin: 25px 250px;
+    padding: 50px;
+}
+/* Slider */
+.slider {
+    border: 15px solid #fff;
+    box-shadow: 1px 1px 1px 1px #ccc;
+    grid-area: slider;
+    /* height: 150px; */
+    margin: 0px 25px 25px 0px;
+}
+img {
+    margin: 0 0;
+	height: 100%;
+	width: 100%;
+    object-fit: cover;
+}
+/* Summary */
+.summary {
+    background: #fff;
+    /* border: 1px solid black; */
+    grid-area: summary;
+    padding: 10px;
+}
+h1 {
+    font-size: 20px;
+}
+/* Work */
+.work {
+    background: #fff;
+    /* border: 1px solid black; */
+    grid-area: work;
+    margin: 25px 0px;
+    padding: 10px;
+}
+/* Personal */
+.personal {
+    background: #fff;
+    /* border: 1px solid black; */
+    grid-area: personal;
+    margin: 25px 0px;
+    padding: 10px;
+}
