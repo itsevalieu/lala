@@ -146,6 +146,18 @@ main:before {
         display: none;
     }
 }
+.footer {
+    color: #888;
+    margin-top: 10px;
+    text-align: center;
+}
+.footer a {
+    text-decoration: none;
+    color: #888;
+}
+.footer a:hover {
+    color: pink;
+}
 @media (max-width: 767px) {
     main {
         margin: 0 0;
