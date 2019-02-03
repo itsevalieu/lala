@@ -142,6 +142,9 @@ main:before {
         z-index: 6;
         height: 100px;
     }
+    .message1, .message2, .message3 {
+        display: none;
+    }
 }
 @media (max-width: 767px) {
     main {
@@ -173,5 +176,8 @@ main:before {
         left: 15%;
         z-index: 6;
         height: 100px;
+    }
+    .message1, .message2, .message3 {
+        display: none;
     }
 }
