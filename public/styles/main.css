@@ -2,52 +2,139 @@ main {
     background: #f5f5dc;
     border: 1px solid rgb(243, 245, 225);
     box-shadow: 1px 1px 1px 1px #ccc;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 1fr auto;
-    grid-template-areas: 
-        "slider summary summary summary"
-        "work work personal personal";
     margin: 25px 250px;
     padding: 50px;
+    min-height: 100%;
+}
+/* Paper */
+.paper {
+    background: #fefefe;
+    box-shadow: 1px 1px 1px 1px #ccc;
+    display: grid;
+    grid-template-columns: 2fr 2fr 1fr 1fr;
+    grid-template-rows: 1fr auto auto;
+    grid-template-areas: 
+        "summary summary summary slider"
+        "personal personal work work"
+        "social social social social";
+    min-height: 100%;
 }
 /* Slider */
 .slider {
     border: 15px solid #fff;
     box-shadow: 1px 1px 1px 1px #ccc;
     grid-area: slider;
-    /* height: 150px; */
-    margin: 0px 25px 25px 0px;
+    transform: rotate(-2deg);
+    height: 450px;
+    width: 300px;
 }
-img {
+.slider:hover {
+    transform: rotate(1deg);
+}
+.profile {
     margin: 0 0;
 	height: 100%;
 	width: 100%;
     object-fit: cover;
 }
-/* Summary */
-.summary {
-    background: #fff;
-    /* border: 1px solid black; */
-    grid-area: summary;
-    padding: 10px;
+.paperclip {
+    position: absolute;
+    top: 20;
+    right: 350;
+    z-index: 6;
+    height: 100px;
 }
-h1 {
-    font-size: 20px;
+/* Sections */
+.work, .personal, .summary {
+    padding: 25px;
 }
-/* Work */
 .work {
-    background: #fff;
-    /* border: 1px solid black; */
     grid-area: work;
-    margin: 25px 0px;
-    padding: 10px;
 }
-/* Personal */
 .personal {
-    background: #fff;
-    /* border: 1px solid black; */
     grid-area: personal;
-    margin: 25px 0px;
-    padding: 10px;
+}
+.summary {
+    grid-area: summary;
+}
+/* Social media */
+.social-icons {
+    grid-area: social;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    margin: 25px;
+}
+.social-icons img {
+    width: 50px;
+    height: 50px;
+    padding: 5px;
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+    body {
+        background: orange;
+    }
+    main {
+        margin: 0 0;
+        padding: 25px;
+        width: 100%;
+    }
+    .paper {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        grid-template-areas: 
+            "summary slider"
+            "personal work"
+            "social social";
+    }
+    /* Slider */
+    .slider {
+        height: 450px;
+        width: 300px;
+        transform: rotate(1deg);
+        margin-left: 25px;
+    }
+    .paperclip {
+        position: absolute;
+        top: 20;
+        right: 15%;
+        z-index: 6;
+        height: 100px;
+    }
+}
+@media (max-width: 767px) {
+    body {
+        background: red;
+    }
+    main {
+        margin: 0 0;
+        padding: 25px;
+    }
+    .paper {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto auto auto auto;
+        grid-template-areas: 
+            "slider"
+            "summary"
+            "personal"
+            "work"
+            "social";
+    }  
+    /* Sections */
+    .work, .personal, .summary {
+        padding-top: 15px;
+        padding-bottom: 0px;
+    }  
+    /* Slider */
+    .slider {
+        margin: 0 auto;
+    }
+    .paperclip {
+        position: absolute;
+        top: 20;
+        left: 15%;
+        z-index: 6;
+        height: 100px;
+    }
 }
